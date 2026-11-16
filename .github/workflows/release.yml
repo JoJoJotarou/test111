@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
 permissions:
-  contents: read
+  contents: write  # semantic-release verifies push access even in --dry-run
 jobs:
   release:
     runs-on: ubuntu-latest
