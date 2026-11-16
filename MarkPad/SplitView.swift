@@ -4,3 +4,7 @@ struct SplitView {
     var previewDelayMs: Int = 500   // AC-2
     func layout() -> String { "editor | preview" }   // AC-1
 }
+
+extension SplitView {
+    func togglePreview(_ visible: Bool) -> Bool { !visible }   // AC-4 (CR #9)
+}
