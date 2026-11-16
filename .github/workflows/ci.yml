@@ -1,0 +1,26 @@
+name: CI
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: ["req-*", "fix-*"]
+permissions:
+  contents: read
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint (placeholder)
+        run: echo "TODO: swiftlint --strict (needs macos runner)"
+      - name: Test (placeholder)
+        run: echo "TODO: xcodebuild test -scheme MarkPad -destination 'platform=macOS'"
+      - name: Build DMG (placeholder)
+        run: |
+          echo "TODO: xcodebuild archive + create-dmg on macos-latest"
+          mkdir -p dist && echo "placeholder for MarkPad.dmg" > dist/README.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: markpad-dmg-placeholder
+          path: dist/

@@ -1,0 +1,28 @@
+name: Change Request
+description: 修改已确认需求的范围或验收标准，需本人批准
+title: "[CR] "
+type: Change Request
+body:
+  - type: input
+    id: feature
+    attributes:
+      label: 要修改的 Feature
+      placeholder: "#12"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 现在的 AC
+    validations:
+      required: true
+  - type: textarea
+    id: proposed
+    attributes:
+      label: 改成什么
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: 为什么要改

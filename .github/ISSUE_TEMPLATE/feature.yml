@@ -1,0 +1,26 @@
+name: Feature
+description: 一个需求，写编号的 Given/When/Then 验收标准
+title: "[Feature] "
+type: Feature
+body:
+  - type: textarea
+    id: why
+    attributes:
+      label: 背景 / 为什么
+      description: 谁、在什么场景、遇到什么问题
+    validations:
+      required: true
+  - type: textarea
+    id: ac
+    attributes:
+      label: 验收标准 AC
+      description: 每条一个编号，Task 会引用这些编号
+      value: |
+        AC-1 Given … When … Then …
+        AC-2 Given … When … Then …
+    validations:
+      required: true
+  - type: textarea
+    id: out
+    attributes:
+      label: 不做什么 / Out of scope
